@@ -21,7 +21,8 @@ def sift_down (i, data, swaps):
         swaps.append((i, min_index))
         data[i], data[min_index] = data[min_index], data[i]
         sift_down(min_index, data, swaps)
-            
+        return swaps
+    
 def main():
     text = input()
     if "I" in text:
