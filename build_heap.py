@@ -39,14 +39,14 @@ def main():
         with open(file_path, mode="r") as file:
             n = int(file.readline())
             data = list(map(int, file.readline().split()))
-     #give back all swaps
-     swaps = build_heap(data)
-     
-     print(len(swaps))
-     for i, j in swaps:
+            
+    swaps = build_heap(data)
+    
+    print(len(swaps))
+    for i, j in swaps:
         print(i, j)
         
-     else:
+    else:
         print("Enter the letter 'I' or 'F':")
         return
         
