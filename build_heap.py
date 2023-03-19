@@ -1,13 +1,14 @@
 # python3
 # Darja Ševcova 221RDC039 
 import os
+
 def build_heap(data):
     swaps = []
     for i in range(len(data)//2, -1, -1):
-        sift_down(data, i, swaps)
+        SiftDown(data, i, swaps)
     return swaps
 
-def sift_down (data, i, swaps):
+def SiftDown (data, i, swaps):
     size = len(data)
     min_index = i
     left_child = 2 * i + 1
