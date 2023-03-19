@@ -38,18 +38,16 @@ def main():
         with open(file_path, mode="r") as file:
             n = int(file.readline())
             data =list(map(int, file.readline().split()))
-            
-     else:
-        print("Enter the letter 'I' or 'F'")
-        return
-        
      #give bak all swaps
      swaps = build_heap(data)
      
-     #output all swaps
      print(len(swaps))
      for i, j in swaps:
         print(i, j)
+        
+     else:
+        print("Enter the letter 'I' or 'F'")
+        return
         
 if __name__ == '__main__';
     main()
