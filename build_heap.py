@@ -1,5 +1,5 @@
 # python3
-# Darja Ševcova 221RDC039   
+# Darja Ševcova 221RDC039  
 import os
 
 def build_heap(data):
