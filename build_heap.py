@@ -5,10 +5,10 @@ import os
 def build_heap(data):
     swaps = []
     for i in range(len(data)//2, -1, -1):
-        SiftDown(data, i, swaps)
+        sift_down(data, i, swaps)
     return swaps
 
-def SiftDown (data, i, swaps):
+def sift_down (i, data, swaps):
     size = len(data)
     min_index = i
     left_child = 2 * i + 1
@@ -20,7 +20,7 @@ def SiftDown (data, i, swaps):
     if min_index != i:
         swaps.append((i, min_index))
         data[i], data[min_index] = data[min_index], data[i]
-        SiftDown(data, min_index, swaps)
+        sift_down(min_index, data, swaps)
             
 def main():
     text = input()
