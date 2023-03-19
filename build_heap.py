@@ -12,7 +12,7 @@ def sift_down (data, i, swaps):
     if right_child< size and data[rigth_child] < data[min_index]:
         rigth_child = min_index
     if min_index != i:
-        swaps.append(i, nim_index))
+        swaps.append(i, min_index))
         data[min_index], data[i] = data[i], data[min_index]
         sift_down(data, min_index, swaps)
         
