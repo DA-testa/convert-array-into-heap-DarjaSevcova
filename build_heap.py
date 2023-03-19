@@ -26,7 +26,7 @@ def main():
     text = input("Enter the letter 'I' or 'F'")
     if "I" in text:
     #input from keyboard
-        n = int(input("Enter a number n: ")
+        n = int(input("Enter a number n: "))
         data = list(map(int, input("Enter the number of spaces: ").split()))
     #check if length of data is the same as the said length
         assert len(data) == n
