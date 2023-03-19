@@ -42,6 +42,7 @@ def main():
             
     swaps = build_heap(data)
     
+    assert len(swaps) <= 4*len(data)
     print(len(swaps))
     for i, j in swaps:
         print(i, j)
