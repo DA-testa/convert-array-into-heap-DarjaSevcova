@@ -34,7 +34,7 @@ def main():
         
     elif "F" in text:
         filename = input()        
-        path = './test/'
+        path = './tests/'
         file_path = os.path.join(path, filename)
         with open(file_path, mode = "r") as file:
             n = int(file.readline())
@@ -46,6 +46,10 @@ def main():
     print(len(swaps))
     for i, j in swaps:
         print(i, j)
+        
+    else:
+        print("Enter letters 'I' or 'F'")
+        return
         
 if __name__ == "__main__":
     main()
