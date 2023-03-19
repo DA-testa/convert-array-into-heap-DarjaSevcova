@@ -14,9 +14,9 @@ def sift_down (i, data, swaps):
     left_child = 2 * i + 1
     right_child = 2 * i + 2
     if left_child < size and data[left_child] < data[min_index]:
-        left_child = min_index
+        min_index = left_child 
     if right_child < size and data[right_child] < data[min_index]:
-        right_child = min_index
+        min_index = right_child 
     if min_index != i:
         swaps.append((i, min_index))
         data[i], data[min_index] = data[min_index], data[i]
