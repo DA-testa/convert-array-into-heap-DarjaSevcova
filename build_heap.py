@@ -45,8 +45,7 @@ def main():
     assert len(swaps) <= 4*len(data)
     print(len(swaps))
     for i, j in swaps:
-        print(i, j)
-        
+        print(i, j)        
     else:
         print("Ievadiet burtu 'I' vai 'F':")
         return
