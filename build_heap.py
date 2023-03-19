@@ -39,16 +39,15 @@ def main():
         with open(file_path, mode = "r") as file:
             n = int(file.readline())
             data = list(map(int, file.readline().split()))
-            
+    else:
+        print("Ievadiet burtu 'I' vai 'F':")
+        return    
     swaps = build_heap(data)
     
     assert len(swaps) <= 4*len(data)
     print(len(swaps))
     for i, j in swaps:
         print(i, j)        
-    else:
-        print("Ievadiet burtu 'I' vai 'F':")
-        return
         
 if __name__ == "__main__":
     main()
