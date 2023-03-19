@@ -35,7 +35,7 @@ def main():
         filename = input("Enter the file name: ")
         path = './test/'
         file_path = of.path.join(path, filename)
-        with open(file_path
+        with open(file_path, mode="r") as file:
             n = int(file.readline())
             data =list(map(int, file.readline().split()))
             
