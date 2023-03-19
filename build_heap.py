@@ -1,6 +1,11 @@
 # python3
 # Darja Ševcova 221RDC039  
 import os
+def build_heap(data):
+    swaps = []
+    for i in range(len(data)//2, -1, -1):
+        sift_down(data, i, swaps)
+    return swaps
 
 def sift_down (data, i, swaps):
     size = len(data)
@@ -9,19 +14,13 @@ def sift_down (data, i, swaps):
     right_child = 2 * i + 2
     if left_child < size and data[left_child] < data[min_index]:
         left_child = min_index
-    if right_child< size and data[right_child] < data[min_index]:
+    if right_child < size and data[right_child] < data[min_index]:
         right_child = min_index
     if min_index != i:
         swaps.append((i, min_index))
-        data[min_index], data[i] = data[i], data[min_index]
+        data[i], data[min_index] = data[min_index], data[i]
         sift_down(data, min_index, swaps)
-        
-def build_heap(data):
-    swaps = []
-    for i in range(len(data)//2, -1, -1):
-        sift_down(data, i, swaps)
-    return swaps
-    
+            
 def main():
     text = input("Enter the letter 'I' or 'F'")
     if "I" in text:
@@ -34,11 +33,11 @@ def main():
     elif "F" in text:
         filename = input("Enter the file name: ")
         path = './test/'
-        file_path = of.path.join(path, filename)
+        file_path = os.path.join(path, filename)
         with open(file_path, mode="r") as file:
             n = int(file.readline())
             data =list(map(int, file.readline().split()))
-     #give bak all swaps
+     #give back all swaps
      swaps = build_heap(data)
      
      print(len(swaps))
@@ -49,5 +48,5 @@ def main():
         print("Enter the letter 'I' or 'F':")
         return
         
-if __name__ == '__main__';
-    main()
+if name == '__main__';
+   main()
