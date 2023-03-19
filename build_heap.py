@@ -32,8 +32,7 @@ def main():
         assert len(data) == n
         
     elif "F" in text:
-        filename = input()
-        
+        filename = input()        
         path = './test/'
         file_path = os.path.join(path, filename)
         with open(file_path, mode="r") as file:
@@ -52,4 +51,4 @@ def main():
         return
         
 if __name__ == "__main__":
-   main()
+    main()
