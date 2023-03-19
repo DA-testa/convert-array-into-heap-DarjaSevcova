@@ -47,5 +47,9 @@ def main():
     for i, j in swaps:
         print(i, j)
         
+    else:
+        print("Ievadiet burtu 'I' vai 'F'")
+        return
+        
 if __name__ == "__main__":
     main()
