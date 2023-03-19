@@ -20,7 +20,7 @@ def SiftDown (data, i, swaps):
     if min_index != i:
         swaps.append((i, min_index))
         data[i], data[min_index] = data[min_index], data[i]
-        sift_down(data, min_index, swaps)
+        SiftDown(data, min_index, swaps)
             
 def main():
     text = input("Enter the letter 'I' or 'F'")
@@ -33,11 +33,12 @@ def main():
         
     elif "F" in text:
         filename = input("Enter the file name: ")
+        
         path = './test/'
         file_path = os.path.join(path, filename)
         with open(file_path, mode="r") as file:
             n = int(file.readline())
-            data =list(map(int, file.readline().split()))
+            data = list(map(int, file.readline().split()))
      #give back all swaps
      swaps = build_heap(data)
      
