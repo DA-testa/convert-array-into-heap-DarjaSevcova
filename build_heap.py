@@ -50,5 +50,5 @@ def main():
         print("Enter the letter 'I' or 'F':")
         return
         
-if name == '__main__';
+if name == '__main__':
    main()
