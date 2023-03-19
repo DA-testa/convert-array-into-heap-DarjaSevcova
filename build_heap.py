@@ -23,16 +23,16 @@ def SiftDown (data, i, swaps):
         SiftDown(data, min_index, swaps)
             
 def main():
-    text = input("Enter the letter 'I' or 'F'")
+    text = input()
     if "I" in text:
     #input from keyboard
-        n = int(input("Enter a number n: "))
-        data = list(map(int, input("Enter the number of spaces: ").split()))
+        n = int(input())
+        data = list(map(int, input().split()))
     #check if length of data is the same as the said length
         assert len(data) == n
         
     elif "F" in text:
-        filename = input("Enter the file name: ")
+        filename = input()
         
         path = './test/'
         file_path = os.path.join(path, filename)
