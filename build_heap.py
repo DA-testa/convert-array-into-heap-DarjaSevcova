@@ -47,9 +47,5 @@ def main():
     for i, j in swaps:
         print(i, j)
         
-    else:
-        print("Enter letters 'I' or 'F'")
-        return
-        
 if __name__ == "__main__":
     main()
