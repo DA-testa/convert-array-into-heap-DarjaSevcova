@@ -1,5 +1,5 @@
 # python3
-# Darja Ševcova 221RDC039 
+# Darja Ševcova 221RDC039
 import os
 
 def sift_down (data, i, swaps):
